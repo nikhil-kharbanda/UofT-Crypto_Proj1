@@ -1,21 +1,22 @@
 /*Style page*/
 * {
     box-sizing: border-box;
+    text-align: center;
   }
 
 body {
   margin: 0px;
+  font-family: monospace;
   padding: 0px;
 }
-
 #navbar {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   padding: 10px;
 }
 
 #navbar h2 {
-   font-size: 30px; 
-   font-family: monospace;
+   font-size: 40px;
+   color: white; 
    text-align: right;
 }
   
@@ -34,10 +35,39 @@ body {
     clear: both;
   }
 
-  #column1 {
-    text-align: right;
+  #column1,
+  #column2 {
+    background-color:rgba(95, 169, 253, 0.623);
+    border-radius: 4%;
+    border: 2px solid blue;
+
+    /* text-align: right; */
   }
 
+h2{
+  font-size: 50px;
+}
+
+.cryptoBtn,
+#clearBtn,
+.stockBtn{
+  color: rgb(7, 7, 85);
+  background-color: cornflowerblue;
+  font-size: 20px;
+  font-family: monospace;
+  border-radius: 15%;
+}
+
+#statcyptoPrice,
+#statstocksPrice,
+#statcyptoGraph,
+#statstocksGraph{
+  background-color: white;
+  border-radius: 10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
 
   
 
