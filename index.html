@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Style CSS -->
+    <title>Document</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
-
-    <title>Project 1</title>
 </head>
+<body>
+    <nav id="navbar">
+        <h2>Crypto/Stock Tracker</h2>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+    </nav>
+      <body>
+
+      
+      <aside class="row">
+        <card id="column1" class="column">
+          <h2>Crypto</h2>
+          <p>Select a coin from the drop down menu</p>
+          <input type="text" placeholder="Search..">
+          <div id="cryptoPrice"></div>
+          <div id="cryptoGraph"></div>
+          <button class="cryptoBtn">1hr</button>
+          <button class="cryptoBtn">24hr</button>
+          <button class="cryptoBtn">1 Week</button>
+          <button class="cryptoBtn">1 Month</button>
+          <button class="cryptoBtn">1 Year</button>
+        </card>
+          
+        <card id="column2"class="column">
+          <h2>Stocks</h2>
+          <p>Select a stock from the drop down menu</p>
+          <input type="text" placeholder="Search..">
+          <div id="stockPrice"></div>
+          <div id="stockGraph"></div>
+          <button class="stockBtn">1hr</button>
+          <button class="stockBtn">24hr</button>
+          <button class="stockBtn">1 Week</button>
+          <button class="stockBtn">1 Month</button>
+          <button class="stockBtn">1 Year</button>
+        </card>
+      </aside>
+
+      <div>
+        <button id="clearBtn">Clear</button>
+      </div>
+
+      <script src="Assets/js/script.js"></script>
+</body>
+</html>
