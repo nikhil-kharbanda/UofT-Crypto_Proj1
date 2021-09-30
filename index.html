@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./Assets/css/style.css">
 </head>
 <body style="background-image: url(./Assets/imgs/imageedit_3_7294279739.gif);">
@@ -16,7 +19,10 @@
         <card id="column1" class="column">
           <h2>Crypto</h2>
           <p>Select a coin from the drop down menu</p>
-          <input type="text" placeholder="Search...">
+          <div class="ui-widget">
+            <label for="tags">Tags: </label>
+            <input id="tags" class="searchbar">
+          </div>
           <div id="statcyptoPrice">
             <div id="cyptoPrice">PLace HOLDER</div>
           </div>
