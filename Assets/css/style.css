@@ -2,6 +2,7 @@
 * {
     box-sizing: border-box;
     text-align: center;
+    font-family: 'Bebas Neue', cursive;
   }
 
 body {
@@ -39,7 +40,7 @@ body {
   #column2 {
     background-color:rgba(95, 169, 253, 0.623);
     border-radius: 4%;
-    border: 2px solid blue;
+    border: 2px solid black;
 
     /* text-align: right; */
   }
