@@ -1,4 +1,6 @@
-let clearButton = document.querySelector('#clearBtn')
+let clearButton = document.querySelector('#clearBtn');
+let cyrptoInput = document.getElementById("tags");
+
 
   $( function() {
     let bitcoin = [
@@ -74,3 +76,18 @@ function clearEntries() {
 }
 
 clearButton.addEventListener('click', clearEntries)
+
+function crypto(cryptoID){
+  var statusPingUrl = "https://api.coingecko.com/api/v3/ping";
+
+  fetch(statusPingUrl)
+  .then(function (response) {
+    console.log(response.status);
+    return response.json();
+  })
+  .then(function (response){
+
+  })
+}
+
+crypto("btc");
