@@ -7,7 +7,6 @@
 
 body {
   margin: 0px;
-  font-family: monospace;
   padding: 0px;
 }
 #navbar {
@@ -39,7 +38,6 @@ body {
   #column1,
   #column2 {
     background-color:rgba(95, 169, 253, 0.623);
-    border-radius: 4%;
     border: 2px solid black;
 
     /* text-align: right; */
@@ -52,11 +50,8 @@ h2{
 .cryptoBtn,
 #clearBtn,
 .stockBtn{
-  color: rgb(7, 7, 85);
   background-color: cornflowerblue;
   font-size: 20px;
-  font-family: monospace;
-  border-radius: 15%;
 }
 
 #statcyptoPrice,
@@ -64,10 +59,13 @@ h2{
 #statcyptoGraph,
 #statstocksGraph{
   background-color: white;
-  border-radius: 10%;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  margin: 10px auto;
+
   display: none;
+
 }
 
 
