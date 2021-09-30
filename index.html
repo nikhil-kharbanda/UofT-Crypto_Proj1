@@ -7,21 +7,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="./Assets/css/style.css">
 </head>
-<body>
-    <nav id="navbar">
+<body style="background-image: url(./Assets/imgs/imageedit_3_7294279739.gif);">
+      <nav id="navbar">
         <h2>Crypto/Stock Tracker</h2>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
-    </nav>
-      <body>
-
-      
+      </nav>
       <aside class="row">
         <card id="column1" class="column">
           <h2>Crypto</h2>
           <p>Select a coin from the drop down menu</p>
-          <input type="text" placeholder="Search..">
-          <div id="cryptoPrice"></div>
-          <div id="cryptoGraph"></div>
+          <input type="text" placeholder="Search...">
+          <div id="statcyptoPrice">
+            <div id="cyptoPrice">PLace HOLDER</div>
+          </div>
+          <div id="statcyptoGraph">
+            <div id="cyptoGraph"> PLACE HOLDER</div>
+          </div>
           <button class="cryptoBtn">1hr</button>
           <button class="cryptoBtn">24hr</button>
           <button class="cryptoBtn">1 Week</button>
@@ -32,9 +33,13 @@
         <card id="column2"class="column">
           <h2>Stocks</h2>
           <p>Select a stock from the drop down menu</p>
-          <input type="text" placeholder="Search..">
-          <div id="stockPrice"></div>
-          <div id="stockGraph"></div>
+          <input type="text" placeholder="Search...">
+          <div id="statstocksPrice">
+            <div id="stockPrice">PLace HOLDER</div>
+          </div>
+          <div id="statstocksGraph">
+            <div id="stockGraph"> PLACE HOLDER</div>
+          </div>
           <button class="stockBtn">1hr</button>
           <button class="stockBtn">24hr</button>
           <button class="stockBtn">1 Week</button>
@@ -43,9 +48,11 @@
         </card>
       </aside>
 
-      <div>
-        <button id="clearBtn">Clear</button>
-      </div>
+      <footer>
+        <div>
+          <button id="clearBtn">Clear</button>
+        </div>
+      </footer>
 
       <script src="Assets/js/script.js"></script>
 </body>
