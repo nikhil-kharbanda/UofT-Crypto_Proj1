@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./Assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url(./Assets/imgs/imageedit_3_7294279739.gif);">
+<body style="background-image: url(./Assets/imgs/imageedit_3_7294279739.gif);" background-cover="cover">
       <nav id="navbar">
         <h2>Crypto/Stock Tracker</h2>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -25,6 +25,7 @@
             <input id="tags" class="searchbar">
           </div>
           <div id="statcyptoPrice">
+            <button class="btn btn-primary" type="button" id="crytosearch-btn"><i class="fas fa-search"></i></button>
             <div id="cyptoPrice">PLace HOLDER</div>
           </div>
           <div id="statcyptoGraph">
@@ -35,11 +36,14 @@
           <button id="cry1wk" class="cryptoBtn">1 Week</button>
           <button id="cry1mth" class="cryptoBtn">1 Month</button>
           <button id="cry1yr" class="cryptoBtn">1 Year</button>
+          <button id="crysearch" class="cryptoBtn">1 Year</button>
+
         </card>
           
         <card id="column2"class="column">
           <h2>Stocks</h2>
           <p>Select a stock from the drop down menu</p>
+          <button class="btn btn-primary" type="button" id="stocksearch-btn"><i class="fas fa-search"></i></button>
           <input type="text" placeholder="Search...">
           <div id="statstocksPrice">
             <div id="stockPrice">PLace HOLDER</div>
@@ -59,6 +63,6 @@
       </aside>
 
 
-      <script src="Assets/js/script.js"></script>
+    <script src="Assets/js/script.js"></script>
 </body>
 </html>
