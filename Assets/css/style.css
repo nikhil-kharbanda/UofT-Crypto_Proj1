@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box;
   text-align: center;
-  font-family: "Bebas Neue", cursive;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 body {
