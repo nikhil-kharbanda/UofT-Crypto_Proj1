@@ -77,3 +77,20 @@ h2{
   margin-left: auto;
   margin-right: auto;
 }
+
+p.infoText {
+  position: relative;
+  top: -13rem;
+  line-height: 0.5rem;
+}
+
+h3.infoText {
+  position: relative;
+  top: -13rem;
+}
+
+p.infoText2 {
+  position: relative;
+  top: -13rem;
+  line-height: 1.5rem;
+}

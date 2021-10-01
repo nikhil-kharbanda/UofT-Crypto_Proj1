@@ -6,6 +6,15 @@ let cryptoValInput = document.getElementById("cryptoVal");
 let cyptoPriceEl = document.getElementById("cyptoPrice");
 let stockBtn = document.getElementById("stocksearch-btn");
 let cyrptoBtn = document.getElementById("crytosearch-btn");
+let CrypNameEl = document.querySelector('.nameDis')
+let CrypPriceEl = document.querySelector('.priceDis')
+let CrypCapEl = document.querySelector('.capDis')
+let CrypVolEl = document.querySelector('.volumeDis')
+let CrypChangeEl = document.querySelector('.changeDis')
+let CrypUpdateEl = document.querySelector('.updateDis')
+let stockPriceEl = document.querySelector('.stockPrice')
+let stockChangeEl = document.querySelector('.stockChange')
+let stockVolEl = document.querySelector('.stockVol')
 
 let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
@@ -149,10 +158,26 @@ let coinsList = [
 
 function clearEntries() {
   document.getElementById("tagsCrypto").value = "";
+
+  if (document.getElementById("tagsCrypto").value === ""){
+    CrypNameEl.textContent = "";
+    CrypPriceEl.textContent = "";
+    CrypCapEl.textContent = "";
+    CrypVolEl.textContent = "";
+    CrypChangeEl.textContent = "";
+    CrypUpdateEl.textContent = "";
+    stockPriceEl.textContent = "";
+    stockChangeEl.textContent = "";
+    stockVolEl.textContent = "";
+    console.log('clear')
+  } else {
+    console.log('not')
+  }
 }
 
 function crypto(cryptoName) {
   symbolToId(cryptoName);
+
 
   let cryptoURL =
     "https://api.coingecko.com/api/v3/simple/price?ids=" +
@@ -167,8 +192,8 @@ function crypto(cryptoName) {
       return response.json();
     })
     .then(function (response) {
-      // console.log(response);
-
+      console.log(response);
+        
       switch (cryptoID) {
         case "bitcoin": //call the foo(response.bitcoin)
           CryptoCad(response.bitcoin);
@@ -288,6 +313,7 @@ function symbolToId(cryptoName) {
       cryptoSymbol = coinsList[i].symbol;
       cryptoID = coinsList[i].id;
       cryptoNameVal = coinsList[i].name;
+      CrypNameEl.textContent = "Name: " + cryptoName + " (" + cryptoSymbol + ")"
       break;
     }
   }
@@ -298,26 +324,31 @@ function symbolToId(cryptoName) {
 
 function CryptoCad(params) {
   var price = params.cad;
+  CrypPriceEl.textContent = "Price: " + price
   console.log(price);
 }
 
 function CryptoCadMarketCap(params) {
   var marketCap = params.cad_market_cap;
+  CrypCapEl.textContent = "Market Cap: " + marketCap
   console.log(marketCap);
 }
 
 function CryptoCad24HrVol(params) {
   var dayVol = params.cad_24h_vol;
+  CrypVolEl.textContent = "24Hr Volume: " + dayVol
   console.log(dayVol);
 }
 
 function CryptoCad24HrChange(params) {
   var dayChange = params.cad_24h_change;
+  CrypChangeEl.textContent = "24Hr Change: " + dayChange
   console.log(dayChange);
 }
 
 function CryptoCadLastUpdated(params) {
   var lastUpdated = params.last_updated_at;
+  CrypUpdateEl.textContent = "Last Updated: " + lastUpdated
   console.log(lastUpdated);
 }
 
@@ -377,6 +408,9 @@ function stocks(stockName) {
       var price = priceParsed.price;
       var changePercentage = priceParsed.change_percentage;
       var changetotalVol = priceParsed.total_vol;
+      stockPriceEl.textContent = "Price: " + price
+      stockChangeEl.textContent = "Change Percentage: " + changePercentage + "%"
+      stockVolEl.textContent = "Change Total Volume: " + changetotalVol
       console.log(price);
       console.log(changePercentage);
       console.log(changetotalVol);
@@ -397,3 +431,4 @@ stockBtn.addEventListener("click", function () {
   console.log(stockIDInput);
   stocks(stockIDInput);
 });
+
