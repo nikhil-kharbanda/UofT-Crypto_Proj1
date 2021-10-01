@@ -1,68 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="./Assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <link rel="stylesheet" href="./Assets/css/style.css">
+
+
+
+
 </head>
+
 <body style="background-image: url(./Assets/imgs/imageedit_3_7294279739.gif);" background-cover="cover">
-      <nav id="navbar">
-        <h2>Crypto/Stock Tracker</h2>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-      </nav>
-      <aside class="row">
-        <card id="column1" class="column">
-          <h2>Crypto</h2>
-          <p>Select a coin from the drop down menu</p>
-          <div class="ui-widget">
-            <label for="tags">Tags: </label>
-            <button class="btn btn-primary" type="button" id="crytosearch-btn">&#x1F50E<i class="fas fa-search"></i></button>
-            <input id="tags" class="searchbar">
-          </div>
-          <div id="statcyptoPrice">
-            <div id="cyptoPrice">PLace HOLDER</div>
-          </div>
-          <div id="statcyptoGraph">
-            <div id="cyptoGraph"> PLACE HOLDER</div>
-          </div>
-          <button id="cry1hr" class="cryptoBtn">1hr</button>
-          <button id="cry24hr" class="cryptoBtn">24hr</button>
-          <button id="cry1wk" class="cryptoBtn">1 Week</button>
-          <button id="cry1mth" class="cryptoBtn">1 Month</button>
-          <button id="cry1yr" class="cryptoBtn">1 Year</button>
-          <button id="crysearch" class="cryptoBtn">1 Year</button>
+  <nav id="navbar">
+    <h2>Crypto/Stock Tracker</h2>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+  </nav>
+  <aside class="row">
+    <card id="column1" class="column">
+      <h2>Crypto</h2>
+      <p>Select a coin from the drop down menu</p>
+      <div class="ui-widget">
+        <label for="tagsCrypto">Tags: </label>
+        <button class="btn btn-primary" type="button" id="crytosearch-btn">&#x1F50E<i
+            class="fas fa-search"></i></button>
+        <input id="tagsCrypto" id="cryptoVal" class="searchbar">
+      </div>
+      <div id="statcyptoPrice">
+        <div id="cyptoPrice">PLace HOLDER</div>
+      </div>
+      <div id="statcyptoGraph">
+        <div id="cyptoGraph"> PLACE HOLDER</div>
+      </div>
+      <button id="crypto1day" class="cryptoBtn">1day</button>
+      <button id="crypto14day" class="cryptoBtn">14day</button>
+      <button id="crypto1mth" class="cryptoBtn">1Month</button>
+      <button id="cryptoMax" class="cryptoBtn">Max</button>
 
-        </card>
-          
-        <card id="column2"class="column">
-          <h2>Stocks</h2>
-          <p>Select a stock from the drop down menu</p>
-          <button class="btn btn-primary" type="button" id="stocksearch-btn">&#x1F50E<i class="fas fa-search"></i></button>
-          <input type="text" placeholder="Search...">
-          <div id="statstocksPrice">
-            <div id="stockPrice">PLace HOLDER</div>
-          </div>
-          <div id="statstocksGraph">
-            <div id="stockGraph"> PLACE HOLDER</div>
-          </div>
-          <button id="stock1hr" class="stockBtn">1hr</button>
-          <button id="stock24hr" class="stockBtn">24hr</button>
-          <button id="stock1wk" class="stockBtn">1 Week</button>
-          <button id="stock1mth" class="stockBtn">1 Month</button>
-          <button id="stock1yr" class="stockBtn">1 Year</button>
-        </card>
-        <div>
-          <button id="clearBtn">Clear</button>
-        </div>
-      </aside>
+    </card>
+
+    <card id="column2" class="column">
+      <h2>Stocks</h2>
+      <p>Select a stock from the drop down menu</p>
 
 
-    <script src="Assets/js/script.js"></script>
+
+      <div class="ui-widget">
+        <label for="tagsStocks">Tags: </label>
+        <button class="btn btn-primary" type="button" id="stocksearch-btn">&#x1F50E<i
+            class="fas fa-search"></i></button>
+        <input id="tagsStocks" id="tagsStocks" class="searchbar">
+      </div>
+
+
+      <div id="statstocksPrice">
+        <div id="stockPrice">PLace HOLDER</div>
+      </div>
+      <div id="statstocksGraph">
+        <div id="stockGraph"> PLACE HOLDER</div>
+      </div>
+      <button id="stock1hr" class="stockBtn">1hr</button>
+      <button id="stock24hr" class="stockBtn">24hr</button>
+      <button id="stock1wk" class="stockBtn">1 Week</button>
+      <button id="stock1mth" class="stockBtn">1 Month</button>
+      <button id="stock1yr" class="stockBtn">1 Year</button>
+    </card>
+    <div>
+      <button id="clearBtn">Clear</button>
+    </div>
+  </aside>
+
+
+  <script src="Assets/js/script.js"></script>
 </body>
+
 </html>
