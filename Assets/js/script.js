@@ -151,15 +151,6 @@ function clearEntries() {
   document.getElementById("tagsCrypto").value = "";
 }
 
-var btnPressed = "";
-$(document).ready(function () {
-  $(".cryptoBtn").on("click", function () {
-    btnPressed = this.id;
-    console.log(this);
-    CryptoPrevValues(cryptoID);
-  });
-});
-
 function crypto(cryptoName) {
   symbolToId(cryptoName);
 
@@ -184,7 +175,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.bitcoin);
           CryptoCad24HrVol(response.bitcoin);
           CryptoCad24HrChange(response.bitcoin);
-          CryptoCadLastUpdated(response.bitcoin);
           break;
 
         case "ethereum": //call the foo(response.bitcoin)
@@ -192,7 +182,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.ethereum);
           CryptoCad24HrVol(response.ethereum);
           CryptoCad24HrChange(response.ethereum);
-          CryptoCadLastUpdated(response.ethereum);
           break;
 
         case "litecoin": //call the foo(response.bitcoin)
@@ -200,7 +189,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.litecoin);
           CryptoCad24HrVol(response.litecoin);
           CryptoCad24HrChange(response.litecoin);
-          CryptoCadLastUpdated(response.litecoin);
           break;
 
         case "binancecoin": //call the foo(response.bitcoin)
@@ -208,7 +196,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.binancecoin);
           CryptoCad24HrVol(response.binancecoin);
           CryptoCad24HrChange(response.binancecoin);
-          CryptoCadLastUpdated(response.binancecoin);
           break;
 
         case "stellar": //call the foo(response.bitcoin)
@@ -216,7 +203,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.stellar);
           CryptoCad24HrVol(response.stellar);
           CryptoCad24HrChange(response.stellar);
-          CryptoCadLastUpdated(response.stellar);
           break;
 
         case "chainlink": //call the foo(response.bitcoin)
@@ -224,7 +210,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.chainlink);
           CryptoCad24HrVol(response.chainlink);
           CryptoCad24HrChange(response.chainlink);
-          CryptoCadLastUpdated(response.chainlink);
           break;
 
         case "polkadot": //call the foo(response.bitcoin)
@@ -232,7 +217,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.polkadot);
           CryptoCad24HrVol(response.bitcopolkadotin);
           CryptoCad24HrChange(response.polkadot);
-          CryptoCadLastUpdated(response.polkadot);
           break;
 
         case "yearn-finance": //call the foo(response.bitcoin)
@@ -240,7 +224,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.yearn - finance);
           CryptoCad24HrVol(response.yearn - finance);
           CryptoCad24HrChange(response.yearn - finance);
-          CryptoCadLastUpdated(response.yearn - finance);
           break;
 
         case "uniswap-state-dollar": //call the foo(response.bitcoin)
@@ -248,7 +231,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.uniswap - state - dollar);
           CryptoCad24HrVol(response.uniswap - state - dollar);
           CryptoCad24HrChange(response.uniswap - state - dollar);
-          CryptoCadLastUpdated(response.uniswap - state - dollar);
           break;
 
         case "blackdragon-token": //call the foo(response.bitcoin)
@@ -256,7 +238,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.blackdragon - token);
           CryptoCad24HrVol(response.blackdragon - token);
           CryptoCad24HrChange(response.blackdragon - token);
-          CryptoCadLastUpdated(response.blackdragon - token);
           break;
 
         case "tether": //call the foo(response.bitcoin)
@@ -264,7 +245,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.tether);
           CryptoCad24HrVol(response.tether);
           CryptoCad24HrChange(response.tether);
-          CryptoCadLastUpdated(response.tether);
           break;
 
         case "dogecoin": //call the foo(response.bitcoin)
@@ -272,7 +252,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.dogecoin);
           CryptoCad24HrVol(response.dogecoin);
           CryptoCad24HrChange(response.dogecoin);
-          CryptoCadLastUpdated(response.dogecoin);
           break;
 
         case "uniswap": //call the foo(response.bitcoin)
@@ -280,7 +259,6 @@ function crypto(cryptoName) {
           CryptoCadMarketCap(response.uniswap);
           CryptoCad24HrVol(response.uniswap);
           CryptoCad24HrChange(response.uniswap);
-          CryptoCadLastUpdated(response.uniswap);
           break;
 
         default:
@@ -323,47 +301,6 @@ function CryptoCad24HrVol(params) {
 function CryptoCad24HrChange(params) {
   var dayChange = params.cad_24h_change;
   console.log(dayChange);
-}
-
-function CryptoCadLastUpdated(params) {
-  var lastUpdated = params.last_updated_at;
-  console.log(lastUpdated);
-}
-
-function CryptoPrevValues(params) {
-  var stringURL = "";
-
-  if (btnPressed === "crypto1day") {
-    // console.log("This is where u want me in 1 day " + params);
-    stringURL = "days=1";
-  }
-
-  if (btnPressed === "crypto14day") {
-    console.log("This is where u want me in 14 days " + params);
-    stringURL = "days=14";
-  }
-
-  if (btnPressed === "crypto1mth") {
-    console.log("This is where u want me in 1 month " + params);
-    stringURL = "days=30";
-  }
-
-  if (btnPressed === "cryptoMax") {
-    console.log("This is where u want me in max " + params);
-    stringURL = "days=max";
-  }
-  console.log(stringURL);
-
-  prevDataURL =
-    "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=cad&" +
-    stringURL +
-    "&interval=hour";
-
-  console.log(prevDataURL);
-
-  fetch(prevDataURL).then(function (response) {
-    return response.json();
-  });
 }
 
 function stocks(stockName) {
