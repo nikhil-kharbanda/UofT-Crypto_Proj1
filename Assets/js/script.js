@@ -1,18 +1,13 @@
-
-
 let clearButton = document.querySelector("#clearBtn");
 let cyrptoInput = document.getElementById("tagsCrypto");
 let stockInput = document.getElementById("tagsStocks");
 let cryptoIDEl = document.getElementById("cryptoID");
 let cryptoValInput = document.getElementById("cryptoVal");
 let cyptoPriceEl = document.getElementById("cyptoPrice");
-
 let stockBtn = document.getElementById("stocksearch-btn");
-let cyrptoBtn  = document.getElementById("crytosearch-btn");
-
+let cyrptoBtn = document.getElementById("crytosearch-btn");
 
 let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
-
 
 const StockAPIKey = "GuBNTizmz67aMH4WgWT8t8Ozs9UX8s7U4Y2HI7n9";
 
@@ -73,7 +68,6 @@ $(function () {
   $("#tagsStocks").autocomplete({
     source: stockList,
   });
-
 });
 
 let coinsList = [
@@ -365,32 +359,40 @@ function CryptoPrevValues(params) {
     stringURL +
     "&interval=hour";
 
-    fetch(prevDataURL)
-    .then(function (response){
-      return response.json();
-    })
-    
+  console.log(prevDataURL);
+
+  fetch(prevDataURL).then(function (response) {
+    return response.json();
+  });
 }
 
-function stocks(stockName){
+function stocks(stockName) {
+  var stockURL = "https://realstonks.p.rapidapi.com/" + stockName; 
 
-  stockURL = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/v2/get-quotes?region=CAD&symbols=" + stockName;
-
-  var options = {
-    method: 'GET',
-    url: 'https://rest.yahoofinanceapi.com/v11/finance/quoteSummary/' + stockName,
-    params: {modules: 'defaultKeyStatistics,assetProfile'},
+  fetch(stockURL, {
+    method: "GET",
     headers: {
-      'x-api-key': StockAPIKey
-    }
-  };
-
-  axios.request(options).then(function (response) {
-    console.log(response.data);
-  }).catch(function (error) {
-    console.error(error);
-  });
-
+      "x-rapidapi-host": "realstonks.p.rapidapi.com",
+      "x-rapidapi-key": "91a8b7b9famsh4d5df90c14848c2p1df4c3jsnef587f1e29d5",
+    },
+  })
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      var priceParsed = JSON.parse(data);
+      var price = priceParsed.price;
+      var changePercentage = priceParsed.change_percentage;
+      var changetotalVol = priceParsed.total_vol;
+      console.log(price);
+      console.log(changePercentage);
+      console.log(changetotalVol);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
 
 cyrptoBtn.addEventListener("click", function () {
@@ -399,8 +401,8 @@ cyrptoBtn.addEventListener("click", function () {
   crypto(cryptoIDInput);
 });
 
-stockBtn.addEventListener("click", function(){
+stockBtn.addEventListener("click", function () {
   let stockIDInput = tagsStocks.value;
   console.log(stockIDInput);
   stocks(stockIDInput);
-})
+});
