@@ -8,6 +8,10 @@
 body {
   margin: 0px;
   padding: 0px;
+  background-image: url("../imgs/imageedit_3_7294279739.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 #navbar {
   /* background-color: lightblue; */
@@ -67,8 +71,8 @@ h2 {
 }
 
 #centerBox {
-  background: white;
-  width: 200px;
+  background: rgba(95, 169, 253, 0.623);
+  width: 400px;
   height: 200px;
   display: block;
   margin-left: auto;
