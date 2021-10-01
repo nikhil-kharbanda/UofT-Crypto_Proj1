@@ -23,9 +23,6 @@ let bitcoinSymbol = [
   "xlm",
   "link",
   "dot",
-  "yfi",
-  "usd",
-  "bdt",
   "usdt",
   "doge",
   "uni",
@@ -113,23 +110,6 @@ let coinsList = [
     name: "Polkadot",
   },
 
-  {
-    id: "yearn-finance",
-    symbol: "yfi",
-    name: "yearn.finance",
-  },
-
-  {
-    id: "uniswap-state-dollar",
-    symbol: "usd",
-    name: "unified Stable Dollar",
-  },
-
-  {
-    id: "blackdragon-token",
-    symbol: "bdt",
-    name: "BlackDragon Token",
-  },
   {
     id: "tether",
     symbol: "usdt",
@@ -223,30 +203,6 @@ function crypto(cryptoName) {
           CryptoCad24HrVol(response.bitcopolkadotin);
           CryptoCad24HrChange(response.polkadot);
           CryptoCadLastUpdated(response.polkadot);
-          break;
-
-        case "yearn-finance": //call the foo(response.bitcoin)
-          CryptoCad(response.yearn - finance);
-          CryptoCadMarketCap(response.yearn - finance);
-          CryptoCad24HrVol(response.yearn - finance);
-          CryptoCad24HrChange(response.yearn - finance);
-          CryptoCadLastUpdated(response.yearn - finance);
-          break;
-
-        case "uniswap-state-dollar": //call the foo(response.bitcoin)
-          CryptoCad(response.uniswap - state - dollar);
-          CryptoCadMarketCap(response.uniswap - state - dollar);
-          CryptoCad24HrVol(response.uniswap - state - dollar);
-          CryptoCad24HrChange(response.uniswap - state - dollar);
-          CryptoCadLastUpdated(response.uniswap - state - dollar);
-          break;
-
-        case "blackdragon-token": //call the foo(response.bitcoin)
-          CryptoCad(response.blackdragon - token);
-          CryptoCadMarketCap(response.blackdragon - token);
-          CryptoCad24HrVol(response.blackdragon - token);
-          CryptoCad24HrChange(response.blackdragon - token);
-          CryptoCadLastUpdated(response.blackdragon - token);
           break;
 
         case "tether": //call the foo(response.bitcoin)
