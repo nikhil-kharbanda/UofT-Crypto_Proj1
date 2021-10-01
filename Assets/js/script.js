@@ -7,7 +7,7 @@ let cyptoPriceEl = document.getElementById("cyptoPrice");
 let stockBtn = document.getElementById("stocksearch-btn");
 let cyrptoBtn = document.getElementById("crytosearch-btn");
 
-let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+// let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 const StockAPIKey = "GuBNTizmz67aMH4WgWT8t8Ozs9UX8s7U4Y2HI7n9";
 
