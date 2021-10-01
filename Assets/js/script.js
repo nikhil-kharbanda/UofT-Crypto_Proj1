@@ -163,11 +163,10 @@ function crypto(cryptoName) {
 
   fetch(cryptoURL)
     .then(function (response) {
-      // console.log(response);
       return response.json();
     })
     .then(function (response) {
-      // console.log(response);
+      console.log(response);
 
       switch (cryptoID) {
         case "bitcoin": //call the foo(response.bitcoin)
@@ -319,42 +318,6 @@ function CryptoCad24HrChange(params) {
 function CryptoCadLastUpdated(params) {
   var lastUpdated = params.last_updated_at;
   console.log(lastUpdated);
-}
-
-function CryptoPrevValues(params) {
-  var stringURL = "";
-
-  if (btnPressed === "crypto1day") {
-    // console.log("This is where u want me in 1 day " + params);
-    stringURL = "days=1";
-  }
-
-  if (btnPressed === "crypto14day") {
-    console.log("This is where u want me in 14 days " + params);
-    stringURL = "days=14";
-  }
-
-  if (btnPressed === "crypto1mth") {
-    console.log("This is where u want me in 1 month " + params);
-    stringURL = "days=30";
-  }
-
-  if (btnPressed === "cryptoMax") {
-    console.log("This is where u want me in max " + params);
-    stringURL = "days=max";
-  }
-  console.log(stringURL);
-
-  prevDataURL =
-    "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=cad&" +
-    stringURL +
-    "&interval=hour";
-
-  console.log(prevDataURL);
-
-  fetch(prevDataURL).then(function (response) {
-    return response.json();
-  });
 }
 
 function stocks(stockName) {
