@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="./Assets/css/style.css">
@@ -28,8 +29,9 @@
           <div id="statcyptoPrice">
             <div id="cyptoPrice">PLace HOLDER</div>
           </div>
-          <div id="statcyptoGraph">
-            <div id="cyptoGraph"> PLACE HOLDER</div>
+          <div id="statcyptoGraph" style="width:400px; height: 400px">
+            <canvas id="cyptochart" width="400" height="400"></canvas>
+            <!-- <div id="cyptoGraph"> PLACE HOLDER</div> -->
           </div>
           <button id="cry1hr" class="cryptoBtn">1hr</button>
           <button id="cry24hr" class="cryptoBtn">24hr</button>

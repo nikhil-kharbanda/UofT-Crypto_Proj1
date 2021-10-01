@@ -54,16 +54,15 @@ h2{
 
 #statcyptoPrice,
 #statstocksPrice,
-#statcyptoGraph,
 #statstocksGraph{
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-
   margin: 10px auto;
-
   display: none;
-
 }
 
+canvas{
+  background: white;
+}
 
