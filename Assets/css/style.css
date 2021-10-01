@@ -1,13 +1,18 @@
 /*Style page*/
 * {
-    box-sizing: border-box;
-    text-align: center;
-    font-family: 'Bebas Neue', cursive;
-  }
+  box-sizing: border-box;
+  text-align: center;
+  /* font-family: "Bebas Neue", cursive; */
+  font-family: 'Ubuntu Mono', monospace;
+}
 
 body {
   margin: 0px;
   padding: 0px;
+  background-image: url("../imgs/imageedit_3_7294279739.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 #navbar {
   /* background-color: lightblue; */
@@ -15,50 +20,48 @@ body {
 }
 
 #navbar h2 {
-   font-size: 40px;
-   color: white; 
-   text-align: right;
+  font-size: 40px;
+  color: white;
+  text-align: right;
 }
-  
-  /* Create two equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    height: 300px; /* Should be removed. Only for demonstration */
-  }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
-  #column1,
-  #column2 {
-    background-color:rgba(95, 169, 253, 0.623);
-    border: 2px solid black;
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
 
-    /* text-align: right; */
-  }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-h2{
+#column1,
+#column2 {
+  background-color: rgba(95, 169, 253, 0.623);
+  border: 2px solid black;
+
+  /* text-align: right; */
+}
+
+h2 {
   font-size: 50px;
 }
 
 .cryptoBtn,
 #clearBtn,
-.stockBtn{
+.stockBtn {
   background-color: cornflowerblue;
   font-size: 20px;
   /*display: none;*/
 }
 
 #statcyptoPrice,
-#statstocksPrice,
-#statcyptoGraph,
-#statstocksGraph{
+#statstocksPrice {
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -66,12 +69,11 @@ h2{
   margin: 10px auto;
 
   display: none;
-
 }
 
-#centerBox{
-  background: white;
-  width: 200px;
+#centerBox {
+  background: rgba(95, 169, 253, 0.623);
+  width: 400px;
   height: 200px;
   display: block;
   margin-left: auto;

@@ -16,7 +16,7 @@ let stockPriceEl = document.querySelector('.stockPrice')
 let stockChangeEl = document.querySelector('.stockChange')
 let stockVolEl = document.querySelector('.stockVol')
 
-let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+// let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 const StockAPIKey = "GuBNTizmz67aMH4WgWT8t8Ozs9UX8s7U4Y2HI7n9";
 
@@ -32,9 +32,6 @@ let bitcoinSymbol = [
   "xlm",
   "link",
   "dot",
-  "yfi",
-  "usd",
-  "bdt",
   "usdt",
   "doge",
   "uni",
@@ -123,23 +120,6 @@ let coinsList = [
   },
 
   {
-    id: "yearn-finance",
-    symbol: "yfi",
-    name: "yearn.finance",
-  },
-
-  {
-    id: "uniswap-state-dollar",
-    symbol: "usd",
-    name: "unified Stable Dollar",
-  },
-
-  {
-    id: "blackdragon-token",
-    symbol: "bdt",
-    name: "BlackDragon Token",
-  },
-  {
     id: "tether",
     symbol: "usdt",
     name: "Tether",
@@ -188,12 +168,11 @@ function crypto(cryptoName) {
 
   fetch(cryptoURL)
     .then(function (response) {
-      // console.log(response);
       return response.json();
     })
     .then(function (response) {
       console.log(response);
-        
+
       switch (cryptoID) {
         case "bitcoin": //call the foo(response.bitcoin)
           CryptoCad(response.bitcoin);
@@ -249,30 +228,6 @@ function crypto(cryptoName) {
           CryptoCad24HrVol(response.bitcopolkadotin);
           CryptoCad24HrChange(response.polkadot);
           CryptoCadLastUpdated(response.polkadot);
-          break;
-
-        case "yearn-finance": //call the foo(response.bitcoin)
-          CryptoCad(response.yearn - finance);
-          CryptoCadMarketCap(response.yearn - finance);
-          CryptoCad24HrVol(response.yearn - finance);
-          CryptoCad24HrChange(response.yearn - finance);
-          CryptoCadLastUpdated(response.yearn - finance);
-          break;
-
-        case "uniswap-state-dollar": //call the foo(response.bitcoin)
-          CryptoCad(response.uniswap - state - dollar);
-          CryptoCadMarketCap(response.uniswap - state - dollar);
-          CryptoCad24HrVol(response.uniswap - state - dollar);
-          CryptoCad24HrChange(response.uniswap - state - dollar);
-          CryptoCadLastUpdated(response.uniswap - state - dollar);
-          break;
-
-        case "blackdragon-token": //call the foo(response.bitcoin)
-          CryptoCad(response.blackdragon - token);
-          CryptoCadMarketCap(response.blackdragon - token);
-          CryptoCad24HrVol(response.blackdragon - token);
-          CryptoCad24HrChange(response.blackdragon - token);
-          CryptoCadLastUpdated(response.blackdragon - token);
           break;
 
         case "tether": //call the foo(response.bitcoin)
@@ -350,42 +305,6 @@ function CryptoCadLastUpdated(params) {
   var lastUpdated = params.last_updated_at;
   CrypUpdateEl.textContent = "Last Updated: " + lastUpdated
   console.log(lastUpdated);
-}
-
-function CryptoPrevValues(params) {
-  var stringURL = "";
-
-  if (btnPressed === "crypto1day") {
-    // console.log("This is where u want me in 1 day " + params);
-    stringURL = "days=1";
-  }
-
-  if (btnPressed === "crypto14day") {
-    console.log("This is where u want me in 14 days " + params);
-    stringURL = "days=14";
-  }
-
-  if (btnPressed === "crypto1mth") {
-    console.log("This is where u want me in 1 month " + params);
-    stringURL = "days=30";
-  }
-
-  if (btnPressed === "cryptoMax") {
-    console.log("This is where u want me in max " + params);
-    stringURL = "days=max";
-  }
-  console.log(stringURL);
-
-  prevDataURL =
-    "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=cad&" +
-    stringURL +
-    "&interval=hour";
-
-  console.log(prevDataURL);
-
-  fetch(prevDataURL).then(function (response) {
-    return response.json();
-  });
 }
 
 function stocks(stockName) {
