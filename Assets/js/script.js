@@ -149,7 +149,7 @@ function clearEntries() {
     stockPriceEl.textContent = "";
     stockChangeEl.textContent = "";
     stockVolEl.textContent = "";
-    console.log('clear')
+    console.log('clear');
   } else {
     console.log('not')
   }
@@ -340,14 +340,27 @@ function stocks(stockName) {
 }
 
 cyrptoBtn.addEventListener("click", function () {
+  clearLabels();
   let cryptoIDInput = tagsCrypto.value;
   console.log(cryptoIDInput);
   crypto(cryptoIDInput);
 });
 
 stockBtn.addEventListener("click", function () {
+  clearLabels();
   let stockIDInput = tagsStocks.value;
   console.log(stockIDInput);
   stocks(stockIDInput);
 });
 
+function clearLabels(){
+  CrypNameEl.textContent = "";
+  CrypPriceEl.textContent = "";
+  CrypCapEl.textContent = "";
+  CrypVolEl.textContent = "";
+  CrypChangeEl.textContent = "";
+  CrypUpdateEl.textContent = "";
+  stockPriceEl.textContent = "";
+  stockChangeEl.textContent = "";
+  stockVolEl.textContent = "";
+}
