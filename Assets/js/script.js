@@ -6,15 +6,17 @@ let cryptoValInput = document.getElementById("cryptoVal");
 let cyptoPriceEl = document.getElementById("cyptoPrice");
 let stockBtn = document.getElementById("stocksearch-btn");
 let cyrptoBtn = document.getElementById("crytosearch-btn");
-let CrypNameEl = document.querySelector('.nameDis')
-let CrypPriceEl = document.querySelector('.priceDis')
-let CrypCapEl = document.querySelector('.capDis')
-let CrypVolEl = document.querySelector('.volumeDis')
-let CrypChangeEl = document.querySelector('.changeDis')
-let CrypUpdateEl = document.querySelector('.updateDis')
-let stockPriceEl = document.querySelector('.stockPrice')
-let stockChangeEl = document.querySelector('.stockChange')
-let stockVolEl = document.querySelector('.stockVol')
+let CrypNameEl = document.querySelector('.nameDis');
+let CrypPriceEl = document.querySelector('.priceDis');
+let CrypCapEl = document.querySelector('.capDis');
+let CrypVolEl = document.querySelector('.volumeDis');
+let CrypChangeEl = document.querySelector('.changeDis');
+let CrypUpdateEl = document.querySelector('.updateDis');
+let stockPriceEl = document.querySelector('.stockPrice');
+let stockChangeEl = document.querySelector('.stockChange');
+let stockVolEl = document.querySelector('.stockVol');
+
+let infoBoxSection = document.getElementById("infoBox");
 
 // let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
@@ -138,6 +140,7 @@ let coinsList = [
 
 function clearEntries() {
   document.getElementById("tagsCrypto").value = "";
+  document.getElementById("tagsStocks").value = "";
 
   if (document.getElementById("tagsCrypto").value === ""){
     CrypNameEl.textContent = "";
@@ -341,6 +344,7 @@ function stocks(stockName) {
 
 cyrptoBtn.addEventListener("click", function () {
   clearLabels();
+  infoBoxSection.style.display = "inline-block";
   let cryptoIDInput = tagsCrypto.value;
   console.log(cryptoIDInput);
   crypto(cryptoIDInput);
@@ -348,6 +352,7 @@ cyrptoBtn.addEventListener("click", function () {
 
 stockBtn.addEventListener("click", function () {
   clearLabels();
+  infoBoxSection.style.display = "inline-block";
   let stockIDInput = tagsStocks.value;
   console.log(stockIDInput);
   stocks(stockIDInput);

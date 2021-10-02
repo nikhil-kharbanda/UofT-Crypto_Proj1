@@ -96,3 +96,7 @@ p.infoText2 {
   top: -13rem;
   line-height: 1.5rem;
 }
+
+#infoBox{
+  display: none;
+}
