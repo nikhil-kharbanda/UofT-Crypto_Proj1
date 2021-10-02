@@ -141,6 +141,7 @@ let coinsList = [
 function clearEntries() {
   document.getElementById("tagsCrypto").value = "";
   document.getElementById("tagsStocks").value = "";
+  infoBoxSection.style.display = "none";
 
   if (document.getElementById("tagsCrypto").value === ""){
     CrypNameEl.textContent = "";
