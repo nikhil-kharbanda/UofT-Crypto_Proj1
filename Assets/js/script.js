@@ -55,7 +55,6 @@ let stockList = [
   "VZ",
   "COST",
   "MCD",
-  "AMD",
   "SBUX",
   "AMD",
   "RY",
@@ -229,7 +228,7 @@ function crypto(cryptoName) {
         case "polkadot": //call the foo(response.bitcoin)
           CryptoCad(response.polkadot);
           CryptoCadMarketCap(response.polkadot);
-          CryptoCad24HrVol(response.bitcopolkadotin);
+          CryptoCad24HrVol(response.polkadot);
           CryptoCad24HrChange(response.polkadot);
           CryptoCadLastUpdated(response.polkadot);
           break;
