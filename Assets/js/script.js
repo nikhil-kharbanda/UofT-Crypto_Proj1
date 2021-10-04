@@ -264,7 +264,7 @@ function symbolToId(cryptoName) {
       cryptoID = coinsList[i].id;
       cryptoNameVal = coinsList[i].name;
       CrypNameEl.textContent =
-        "Name: " + cryptoName + " (" + cryptoSymbol + ")";
+        "Name: " + cryptoNameVal + " (" + cryptoSymbol + ")";
       break;
     }
   }
