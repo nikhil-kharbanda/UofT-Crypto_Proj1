@@ -274,6 +274,7 @@ function symbolToId(cryptoName) {
 }
 
 /*Display the price of the crypto current in CAD. Takes in the response.crypto as a param*/
+// convert price response to text content to be visible on front-end
 function CryptoCad(params) {
   var price = params.cad;
   CrypPriceEl.textContent = "Price: " + price;
@@ -281,6 +282,7 @@ function CryptoCad(params) {
 }
 
 /*Display the MarketCap of the crypto current in CAD. Takes in the response.crypto as a param*/
+// convert market cap response to text content to be visible on front-end
 function CryptoCadMarketCap(params) {
   var marketCap = params.cad_market_cap;
   CrypCapEl.textContent = "Market Cap: " + marketCap;
@@ -288,6 +290,7 @@ function CryptoCadMarketCap(params) {
 }
 
 /*Display the 24Hr Volume of the crypto current in CAD. Takes in the response.crypto as a param*/
+// convert 24hr volume response to text content to be visible on front-end
 function CryptoCad24HrVol(params) {
   var dayVol = params.cad_24h_vol;
   CrypVolEl.textContent = "24Hr Volume: " + dayVol;
@@ -295,6 +298,7 @@ function CryptoCad24HrVol(params) {
 }
 
 /*Display the 24Hr change of the crypto current in CAD. Takes in the response.crypto as a param*/
+// convert 24hr change response to text content to be visible on front-end
 function CryptoCad24HrChange(params) {
   var dayChange = params.cad_24h_change;
   CrypChangeEl.textContent = "24Hr Change: " + dayChange;
@@ -302,6 +306,7 @@ function CryptoCad24HrChange(params) {
 }
 
 /*Display when it was last updated. Takes in the response.crypto as a param*/
+// convert last updated response to text content to be visible on front-end
 function CryptoCadLastUpdated(params) {
   var lastUpdated = params.last_updated_at;
   CrypUpdateEl.textContent = "Last Updated: " + lastUpdated;
