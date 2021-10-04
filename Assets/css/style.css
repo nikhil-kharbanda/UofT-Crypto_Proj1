@@ -1,11 +1,12 @@
-/*Style page*/
+/*The universal styling was set to border box and Ubuntu Mono(font)*/
 * {
   box-sizing: border-box;
   text-align: center;
-  /* font-family: "Bebas Neue", cursive; */
   font-family: 'Ubuntu Mono', monospace;
 }
-
+/*The background of the applicaiton was from an URL.
+To make it fit on the page margin and padding were set to 0.
+Also the image was set to no-repeat and to cover the page. */
 body {
   margin: 0px;
   padding: 0px;
@@ -14,12 +15,9 @@ body {
   background-size: cover;
   height: 100%;
 }
-#navbar {
-  /* background-color: lightblue; */
-  padding: 10px;
-}
-
+/*The title of the page will be using the padding, font-size,colour and text-align */
 #navbar h2 {
+  padding: 10px;
   font-size: 40px;
   color: white;
   text-align: right;
@@ -30,34 +28,31 @@ body {
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
 }
 
-/* Clear floats after the columns */
+/* the pseudo-class for  */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
+/* Each card will be light blue and have a black boarder. */
 #column1,
 #column2 {
   background-color: rgba(95, 169, 253, 0.623);
   border: 2px solid black;
-
-  /* text-align: right; */
 }
-
+/* The title for each card will be used will appear at a font size of 50px*/
 h2 {
   font-size: 50px;
 }
-
+/* The clear button will appear blue and have a font of 20px. 
+The search button will only have the icons appear at 20px*/
 .cryptoBtn,
 #clearBtn,
 .stockBtn {
   background-color: cornflowerblue;
   font-size: 20px;
-  /*display: none;*/
 }
 
 #statcyptoPrice,
@@ -65,12 +60,11 @@ h2 {
   background-color: white;
   padding-top: 20px;
   padding-bottom: 20px;
-
   margin: 10px auto;
-
   display: none;
 }
-
+/* The text box which will be containing the results will be centered using margin. 
+It will display as a block, a background colour of light blue.*/
 #centerBox {
   background: rgba(95, 169, 253, 0.623);
   width: 400px;
@@ -79,24 +73,25 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-
+/* This styling would reflect the way the p elements in the info box would appear for the cryptocoin. */
+/* The crypto-coin's results would appear relative have a line height and top spacing. */
 p.infoText {
   position: relative;
   top: -13rem;
   line-height: 0.5rem;
 }
-
+/* The font positing in the info text would be relative and have a top spacing. */
 h3.infoText {
   position: relative;
   top: -13rem;
 }
-
+/* The text for the stock's information would be styled by giving a line-height, top spacing and a relative position. */
 p.infoText2 {
   position: relative;
   top: -13rem;
   line-height: 1.5rem;
 }
-
+/* This makes the results/info box not indically appear */
 #infoBox{
   display: none;
 }
