@@ -5,30 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Crypto/Stock Tracker</title>
+  <!-- Added all the necessary style links-->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./Assets/css/style.css">
 
 
 </head>
-
 <body>
+  <!-- Added title  -->
   <nav id="navbar">
     <h2>Crypto/Stock Tracker</h2>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
   </nav>
+  <!-- made 2 cards(1 for crypto, 1 for stock) that display a search box to search for desired coin/stock -->
   <aside class="row">
     <card id="column1" class="column">
       <h2>Crypto</h2>
-      <p>Select a coin from the drop down menu</p>
+      <p>Search for a coin below</p>
       <div class="ui-widget">
         <label for="tagsCrypto">Tags: </label>
-        <button class="btn btn-primary" type="button" id="crytosearch-btn">&#x1F50E<i
-            class="fas fa-search"></i></button>
+        <button class="btn btn-primary" type="button" id="crytosearch-btn">&#x1F50E<i class="fas fa-search"></i></button>
         <input id="tagsCrypto" id="cryptoVal" class="searchbar">
       </div>
       <div id="statcyptoPrice">
@@ -38,20 +37,18 @@
 
     <card id="column2" class="column">
       <h2>Stocks</h2>
-      <p>Select a stock from the drop down menu</p>
-      <div class="ui-widget">
-        <label for="tagsStocks">Tags: </label>
-        <button class="btn btn-primary" type="button" id="stocksearch-btn">&#x1F50E<i
-            class="fas fa-search"></i></button>
+        <p>Search for a stock below</p>
+         <div class="ui-widget">
+        <label for="tagsStocks">Tags:</label>
+        <button class="btn btn-primary" type="button" id="stocksearch-btn">&#x1F50E<i class="fas fa-search"></i></button>
         <input id="tagsStocks" id="tagsStocks" class="searchbar">
-      </div>
-      <div id="statstocksPrice">
+        </div>
+        <div id="statstocksPrice">
         <div id="stockPrice">PLace HOLDER</div>
-      </div>
-
+        </div>
     </card>
-
   </aside>
+  <!-- Created 3rd box at the bottom of the 2 cards to display the relevant info a user is searching for -->
   <div id="infoBox">
     <div id="centerBox"></div>
     <h3 class="infoText">Results</h3>
@@ -66,8 +63,9 @@
     <p class="stockVol infoText2"></p>
     <button id="clearBtn">Clear</button>
   </div>
-
-
+<!-- added  script tags for .js file and jquery libraries -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="Assets/js/script.js"></script>
 </body>
 
