@@ -24,3 +24,6 @@ THEN the labels in the result box clears and displays the stocks information
 
 Wireframe:
 [Image for our rough idea](Assets/imgs/wireframe.png)
+
+Final Product:
+[Image of out final product idea](Assets/imgs/FinalProduct.PNG)
