@@ -23,4 +23,4 @@ WHEN I request information from a crypto coin value to a stock
 THEN the labels in the result box clears and displays the stocks information  
 
 Wireframe:
-[Image for our rough idea](Assets/imgs/wirefreame.png)
+[Image for our rough idea](Assets/imgs/wireframe.png)
