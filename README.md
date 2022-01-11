@@ -1,26 +1,49 @@
-User Story:  
-AS AN Investor  
 
-I WANT to see the value of different   
-cryto-currencies and stocks   
 
-SO THAT I can see how the trends with either investment's change over time  
+
+<h1 align="center">React Portfolio </h1>
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br />
+
+## Description
+  For this project, I had used react to make a portfolio
   
+### User Story
+As an investor, I would like an application so that I can see the value of different crypto-currencies and stocks so I can see how the trends with either investment's change over time.
 
-Criteria:  
-GIVEN I am an user  
-WHEN I click the link  
-THEN I am sent to a crypto/stocks page  
-WHEN I enter a crypto/stocks  
-THEN various options appear in the drop-down menu  
-WHEN I input a crypto-currency  
-THEN the name, price, Market Capital, 24hr Volume, 24hr Change and last updated price will appear  
-WHEN I enter a stock  
-THEN price, Change Percentage and Change Total volume will appear  
-WHEN I press the clear button,   
-THEN the information will be reset.  
-WHEN I request information from a crypto coin value to a stock  
-THEN the labels in the result box clears and displays the stocks information  
+## Table of Contents
+  - [Description](#description)
+  - [Installation](#installation)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Link](#Link)
+  - [Images](#images)  
+
+## Purpose
+  To create an application so investors can see different market trends at any point in time
+  
+## Installation
+
+### Clone
+  git clone https://github.com/nikhil-kharbanda/UofT-Crypto_Proj1.git
+
+### Install Dependencies
+Once cloned, and to run this application locally, right click on the "index.html" file and select "Open in new browser"
+
+### Running application
+Run the appliaation using "npm run". You will then see the application running on port 3000! in the console. You can then view the app on http://localhost:3000/.
+
+### Features
+1. Users can look for a stock value and get real time updates
+2. Users can look for a cryptocurrency value and see the different trends
+
+## Contributing
+  NA
+
+## Link
+  https://nikhil-kharbanda.github.io/UofT-Crypto_Proj1/
+
+## Images
 
 Wireframe:
 [Image for our rough idea](Assets/imgs/wireframe.png)
