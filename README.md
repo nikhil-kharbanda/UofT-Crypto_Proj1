@@ -37,7 +37,7 @@ Run the appliaation using "npm run". You will then see the application running o
 2. Users can look for a cryptocurrency value and see the different trends
 
 ## Contributing
-  Cathy-Colette Tanya (cathytanya)
+  Cathy-Colette Tanya (cathytanya)  
   Khaleel Paul-Green (khaleelpaul-green)
 
 ## Link
