@@ -6,7 +6,6 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br />
 
 ## Description
-  For this project, I had used react to make a portfolio
   
 ### User Story
 As an investor, I would like an application so that I can see the value of different crypto-currencies and stocks so I can see how the trends with either investment's change over time.
