@@ -1,6 +1,3 @@
-
-
-
 <h1 align="center">Stock-Crypto Tracker </h1>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <br />
@@ -28,9 +25,6 @@ As an investor, I would like an application so that I can see the value of diffe
 
 ### Install Dependencies
 Once cloned, and to run this application locally, right click on the "index.html" file and select "Open in new browser"
-
-### Running application
-Run the appliaation using "npm run". You will then see the application running on port 3000! in the console. You can then view the app on http://localhost:3000/.
 
 ### Features
 1. Users can look for a stock value and get real time updates
